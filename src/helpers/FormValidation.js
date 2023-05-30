@@ -1,7 +1,8 @@
 // In this function I set the validation status and error messages of each input field and render erros accordingly in a <p> element below each input.
 export const FormValidation = (formData, validationStatus, errorMessages) => {
   if (/\d/.test(formData.firstName) || /\d/.test(formData.lastName)) {
-    errorMessages.firstNameErrorMessage = "First and last name must not contain numbers!";
+    errorMessages.firstNameErrorMessage =
+      "First and last name must not contain numbers!";
     validationStatus.isFirstNameValid = false;
 
     return "An error occured!";
@@ -59,18 +60,3 @@ export const FormValidation = (formData, validationStatus, errorMessages) => {
     return "An error occured!";
   }
 };
-
-// validationStatus: {
-//   isFirstNameValid: true,
-//   isLastNameValid: true,
-//   isEmailValid: true,
-//   isPhoneValid: true,
-//   isPasswordValid: true,
-// },
-// errorMessages: {
-//   firstNameErrorMessage: "",
-//   lastNameErrorMessage: "",
-//   emailErrorMessage: "",
-//   phoneErrorMessage: "",
-//   passwordErrorMessage: "",
-// },

@@ -27,7 +27,7 @@ export default {
       type: Function,
       required: true,
     },
-    // Passing the validation status and error messages of the first and last name as props.
+    // Getting the validation status and error messages of the first and last name as props.
     firstNameValidationStatus: { type: Boolean, required: true },
     lastNameValidationStatus: { type: Boolean, required: true },
     firstNameErrorMessage: { type: String, required: true },

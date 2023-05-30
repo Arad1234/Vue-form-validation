@@ -29,8 +29,8 @@
 
 <script>
 export default {
+  // Props from the "FormComponent"
   props: {
-    // Props from the "FormComponent"
     handleInputChange: {
       type: Function,
       required: true,
@@ -40,8 +40,8 @@ export default {
     phoneErrorMessage: { type: String, required: true },
   },
 
+  // Initial state.
   data() {
-    // Initial state.
     return {
       prefixes: ["050", "052", "054"],
       selectedPrefix: null,
@@ -61,7 +61,7 @@ export default {
 };
 </script>
 
-<!-- Setting the style to be scoped to that specific component -->
+<!-- Setting the style to be "scoped" to that specific component -->
 <style scoped>
 div.phone-inputs-container {
   display: flex;
