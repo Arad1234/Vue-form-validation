@@ -8,23 +8,27 @@ export const FormValidation = (formData, validationStatus, errorMessages) => {
     return "An error occured!";
   }
   if (formData.firstName.trim().length < 2) {
-    errorMessages.firstNameErrorMessage = "First name length is too short!";
+    errorMessages.firstNameErrorMessage =
+      "First name must be at least 2 characters!";
     validationStatus.isFirstNameValid = false;
 
     return "An error occured!";
   }
   if (formData.lastName.trim().length < 2) {
-    errorMessages.lastNameErrorMessage = "Last name length is too short!";
+    errorMessages.lastNameErrorMessage =
+      "Last name must be at least 2 characters!";
     validationStatus.isLastNameValid = false;
     return "An error occured!";
   }
   if (formData.firstName.trim().length > 12) {
-    errorMessages.firstNameErrorMessage = "First name length is too long!";
+    errorMessages.firstNameErrorMessage =
+      "First name must be less than 13 characters!";
     validationStatus.isFirstNameValid = false;
     return "An error occured!";
   }
-  if (formData.lastName.trim().length > 12) {
-    errorMessages.lastNameErrorMessage = "Last name length is too long!";
+  if (formData.lastName.trim().length > 15) {
+    errorMessages.lastNameErrorMessage =
+      "Last name must be less than 16 characters!";
     validationStatus.isLastNameValid = false;
 
     return "An error occured!";
